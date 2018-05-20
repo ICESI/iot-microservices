@@ -142,6 +142,7 @@ fi
 
 Reboot your Pi
 ```
+/usr/bin/pulseaudio --start
 pactl load-module module-bluetooth-discover
 ```
 
