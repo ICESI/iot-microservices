@@ -122,6 +122,10 @@ a2dp-source profile connect failed for AA:BB:CC:11:22:33: Protocol not available
 ```
 
 ```
+sudo aptitude install bluetooth pulseaudio-module-bluetooth
+```
+
+```
 vi /etc/pulse/default.pa
 
 #load-module module-bluetooth-discover
