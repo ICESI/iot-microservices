@@ -144,6 +144,7 @@ Reboot your Pi
 ```
 /usr/bin/pulseaudio --start
 pactl load-module module-bluetooth-discover
+sudo systemctl restart bluetooth ???
 ```
 
 ### References
@@ -152,5 +153,6 @@ http://docs.kitt.ai/snowboy/
 http://www.linuxfromscratch.org/blfs/view/7.10/general/swig.html  
 https://www.raspberrypi.org/forums/viewtopic.php?t=53299
 https://raspberrypi.stackexchange.com/questions/67617/bluetoothctl-fails-to-connect-to-any-device-failed-to-connect-org-bluez-erro  
-https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-15-10-16-04-16-10/689297#689297
+https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-15-10-16-04-16-10/689297#689297  
+https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU
 
