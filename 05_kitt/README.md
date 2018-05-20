@@ -1,11 +1,15 @@
 ### Install instructions
 
+Install the following dependencies
 ```
 sudo apt-get install python-pyaudio python3-pyaudio python3-pip sox
 pip3 install pyaudio
 sudo apt-get install libatlas-base-dev
 ```
 
+Configure audio output and input  
+
+The following command allows to determine that the playback device is card 0, device 0, or hw:0,0 (hw:0,1 is HDMI audio out).
 ```
 $ aplay -l
  **** List of PLAYBACK Hardware Devices ****
@@ -23,8 +27,8 @@ $ aplay -l
    Subdevices: 1/1
    Subdevice #0: subdevice #0
 ```   
-Here the playback device is card 0, device 0, or hw:0,0 (hw:0,1 is HDMI audio out).
 
+The following command allows to determine that the recording device is card 1, device 0, or hw1:0.
 ```
 $ arecord -l
 **** List of CAPTURE Hardware Devices ****
@@ -32,8 +36,8 @@ card 1: Camera [Vimicro USB2.0 UVC Camera], device 0: USB Audio [USB Audio]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 ```
-Here the recording device is card 1, device 0, or hw1:0.
 
+The following file allows to setup defaults values for the audio input and output
 ```
 vi ~/.asoundrc
 
@@ -49,10 +53,13 @@ pcm.!default {
    }
 }
 ```
+
+Run a voice record test
 ```
 rec t.wav
 ```
 
+Install swig 3.0.10 or above
 ```
 wget http://downloads.sourceforge.net/swig/swig-3.0.10.tar.gz
 sudo apt-get install libpcre3 libpcre3-dev
@@ -60,10 +67,21 @@ sudo apt-get install libpcre3 libpcre3-dev
             --without-clisp                    \
             --without-maximum-compile-warnings &&
 make
+PY3=1 make check-python-examples
+PY3=1 make check-python-test-suite
+make install &&
+install -v -m755 -d /usr/share/doc/swig-3.0.10 &&
+cp -v -R Doc/* /usr/share/doc/swig-3.0.10
+```
+
+Download snowboy repository and compile it
+```
 git clone https://github.com/Kitt-AI/snowboy.git
 cd swig/Python
 make
 ```
+
+Run the examples
 
 ### References
 https://github.com/Kitt-AI/snowboy  
