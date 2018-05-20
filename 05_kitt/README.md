@@ -83,8 +83,34 @@ make
 
 Run the examples
 
+Bluetooth speaker configuration
+
+```
+root@raspberrypi:/tmp/snowboy/examples/Python# bluetoothctl
+[NEW] Controller B8:27:EB:80:28:C8 raspberrypi [default]
+[bluetooth]# power on
+Changing power on succeeded
+[bluetooth]# agent on
+Agent registered
+[bluetooth]# scan on
+Discovery started
+[CHG] Controller B8:27:EB:80:28:C8 Discovering: yes
+[NEW] Device 00:06:8D:00:7B:13 S8
+[bluetooth]# pair 00:06:8D:00:7B:13
+Attempting to pair with 00:06:8D:00:7B:13
+[CHG] Device 00:06:8D:00:7B:13 Connected: yes
+[CHG] Device 00:06:8D:00:7B:13 UUIDs:
+        00001108-0000-1000-8000-00805f9b34fb
+        0000110b-0000-1000-8000-00805f9b34fb
+        0000110e-0000-1000-8000-00805f9b34fb
+        0000111e-0000-1000-8000-00805f9b34fb
+[CHG] Device 00:06:8D:00:7B:13 Paired: yes
+Pairing successful
+```
+
 ### References
 https://github.com/Kitt-AI/snowboy  
 http://docs.kitt.ai/snowboy/  
-http://www.linuxfromscratch.org/blfs/view/7.10/general/swig.html
+http://www.linuxfromscratch.org/blfs/view/7.10/general/swig.html  
+https://www.raspberrypi.org/forums/viewtopic.php?t=53299
 
