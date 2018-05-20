@@ -114,6 +114,7 @@ Device 00:06:8D:00:7B:13 S8
 [bluetooth]# connect 00:06:8D:00:7B:13
 Attempting to connect to 00:06:8D:00:7B:13
 Failed to connect: org.bluez.Error.Failed
+exit
 ```
 
 ```
@@ -144,7 +145,24 @@ Reboot your Pi
 ```
 /usr/bin/pulseaudio --start
 pactl load-module module-bluetooth-discover
-sudo systemctl restart bluetooth ???
+sudo systemctl restart bluetooth
+hciconfig hci0 up
+```
+
+```
+root@raspberrypi:/home/pi# bluetoothctl
+[NEW] Controller B8:27:EB:80:28:C8 raspberrypi [default]
+[NEW] Device 00:06:8D:00:7B:13 S8
+[bluetooth]# connect 00:06:8D:00:7B:13
+Attempting to connect to 00:06:8D:00:7B:13
+[CHG] Device 00:06:8D:00:7B:13 Connected: yes
+Connection successful
+[CHG] Device 00:06:8D:00:7B:13 UUIDs:
+        00001108-0000-1000-8000-00805f9b34fb
+        0000110b-0000-1000-8000-00805f9b34fb
+        0000110c-0000-1000-8000-00805f9b34fb
+        0000110e-0000-1000-8000-00805f9b34fb
+        0000111e-0000-1000-8000-00805f9b34fb
 ```
 
 ### References
@@ -154,5 +172,6 @@ http://www.linuxfromscratch.org/blfs/view/7.10/general/swig.html
 https://www.raspberrypi.org/forums/viewtopic.php?t=53299
 https://raspberrypi.stackexchange.com/questions/67617/bluetoothctl-fails-to-connect-to-any-device-failed-to-connect-org-bluez-erro  
 https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-15-10-16-04-16-10/689297#689297  
-https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU
+https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU  
+https://bbs.archlinux.org/viewtopic.php?id=172261
 
