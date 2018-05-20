@@ -106,6 +106,39 @@ Attempting to pair with 00:06:8D:00:7B:13
         0000111e-0000-1000-8000-00805f9b34fb
 [CHG] Device 00:06:8D:00:7B:13 Paired: yes
 Pairing successful
+[bluetooth]# trust 00:06:8D:00:7B:13
+[CHG] Device 00:06:8D:00:7B:13 Trusted: yes
+Changing 00:06:8D:00:7B:13 trust succeeded
+[bluetooth]# paired-devices
+Device 00:06:8D:00:7B:13 S8
+[bluetooth]# connect 00:06:8D:00:7B:13
+Attempting to connect to 00:06:8D:00:7B:13
+Failed to connect: org.bluez.Error.Failed
+```
+
+```
+sudo cat /var/log/syslog | grep -i protocol 
+a2dp-source profile connect failed for AA:BB:CC:11:22:33: Protocol not available
+```
+
+```
+vi /etc/pulse/default.pa
+
+#load-module module-bluetooth-discover
+```
+
+```
+vi /usr/bin/start-pulseaudio-x11
+
+if [ x”$SESSION_MANAGER” != x ] ; then
+  /usr/bin/pactl load-module module-x11-xsmp “display=$DISPLAY session_manager=$SESSION_MANAGER” > /dev/null
+fi
+/usr/bin/pactl load-module module-bluetooth-discover
+```
+
+Reboot your Pi
+```
+pactl load-module module-bluetooth-discover
 ```
 
 ### References
