@@ -137,6 +137,7 @@ fi
 
 Reboot your Pi
 ```
+/usr/bin/pulseaudio --kill
 /usr/bin/pulseaudio --start
 pactl load-module module-bluetooth-discover
 sudo systemctl restart bluetooth
