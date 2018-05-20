@@ -98,12 +98,6 @@ Discovery started
 [NEW] Device 00:06:8D:00:7B:13 S8
 [bluetooth]# pair 00:06:8D:00:7B:13
 Attempting to pair with 00:06:8D:00:7B:13
-[CHG] Device 00:06:8D:00:7B:13 Connected: yes
-[CHG] Device 00:06:8D:00:7B:13 UUIDs:
-        00001108-0000-1000-8000-00805f9b34fb
-        0000110b-0000-1000-8000-00805f9b34fb
-        0000110e-0000-1000-8000-00805f9b34fb
-        0000111e-0000-1000-8000-00805f9b34fb
 [CHG] Device 00:06:8D:00:7B:13 Paired: yes
 Pairing successful
 [bluetooth]# trust 00:06:8D:00:7B:13
@@ -157,12 +151,22 @@ root@raspberrypi:/home/pi# bluetoothctl
 Attempting to connect to 00:06:8D:00:7B:13
 [CHG] Device 00:06:8D:00:7B:13 Connected: yes
 Connection successful
-[CHG] Device 00:06:8D:00:7B:13 UUIDs:
-        00001108-0000-1000-8000-00805f9b34fb
-        0000110b-0000-1000-8000-00805f9b34fb
-        0000110c-0000-1000-8000-00805f9b34fb
-        0000110e-0000-1000-8000-00805f9b34fb
-        0000111e-0000-1000-8000-00805f9b34fb
+[bluetooth]# info 00:06:8D:00:7B:13
+Device 00:06:8D:00:7B:13
+        Name: S8
+        Alias: S8
+        Class: 0x240404
+        Icon: audio-card
+        Paired: yes
+        Trusted: yes
+        Blocked: no
+        Connected: yes
+        LegacyPairing: no
+        UUID: Headset                   (00001108-0000-1000-8000-00805f9b34fb)
+        UUID: Audio Sink                (0000110b-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control Target (0000110c-0000-1000-8000-00805f9b34fb)
+        UUID: A/V Remote Control        (0000110e-0000-1000-8000-00805f9b34fb)
+        UUID: Handsfree                 (0000111e-0000-1000-8000-00805f9b34fb)
 ```
 
 ### References
