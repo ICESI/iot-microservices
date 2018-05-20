@@ -85,5 +85,6 @@ Run the examples
 
 ### References
 https://github.com/Kitt-AI/snowboy  
-http://docs.kitt.ai/snowboy/
+http://docs.kitt.ai/snowboy/  
+http://www.linuxfromscratch.org/blfs/view/7.10/general/swig.html
 
