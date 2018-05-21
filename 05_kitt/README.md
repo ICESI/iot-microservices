@@ -175,6 +175,17 @@ Device 00:06:8D:00:7B:13
 cat /var/log/syslog* | grep -i pulse
 ```
 
+```
+snowboy@raspberrypi:~/songs $ aplay bohemian.mp3
+ALSA lib pulse.c:243:(pulse_connect) PulseAudio: Unable to connect: Access denied
+aplay: main:722: audio open error: Connection refused
+snowboy@raspberrypi:~/songs $ pulseaudio -k
+E: [pulseaudio] main.c: Failed to kill daemon: No such process
+snowboy@raspberrypi:~/songs $ pulseaudio --start
+snowboy@raspberrypi:~/songs $ aplay bohemian.mp3
+Playing raw data 'bohemian.mp3' : Unsigned 8 bit, Rate 8000 Hz, Mono
+```
+
 ### References
 https://github.com/Kitt-AI/snowboy  
 http://docs.kitt.ai/snowboy/  
