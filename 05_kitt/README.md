@@ -171,6 +171,10 @@ Device 00:06:8D:00:7B:13
         UUID: Handsfree                 (0000111e-0000-1000-8000-00805f9b34fb)
 ```
 
+```
+cat /var/log/syslog* | grep -i pulse
+```
+
 ### References
 https://github.com/Kitt-AI/snowboy  
 http://docs.kitt.ai/snowboy/  
@@ -179,5 +183,6 @@ https://www.raspberrypi.org/forums/viewtopic.php?t=53299
 https://raspberrypi.stackexchange.com/questions/67617/bluetoothctl-fails-to-connect-to-any-device-failed-to-connect-org-bluez-erro  
 https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-15-10-16-04-16-10/689297#689297  
 https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU  
-https://bbs.archlinux.org/viewtopic.php?id=172261
+https://bbs.archlinux.org/viewtopic.php?id=172261  
+https://github.com/davidedg/NAS-mod-config/blob/master/bt-sound/bt-sound-Bluez5_PulseAudio5.txt
 
