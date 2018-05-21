@@ -135,11 +135,12 @@ fi
 /usr/bin/pactl load-module module-bluetooth-discover
 ```
 
-Reboot your Pi
+Reboot your Pi and run the following commands as a non root user. You might need to remove the device and pair it again after modules loading
 ```
 /usr/bin/pulseaudio --kill
 /usr/bin/pulseaudio --start
 pactl load-module module-bluetooth-discover
+pactl list modules | grep blue
 sudo systemctl restart bluetooth
 hciconfig hci0 up
 ```
