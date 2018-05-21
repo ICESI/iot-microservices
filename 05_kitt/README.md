@@ -184,5 +184,6 @@ https://raspberrypi.stackexchange.com/questions/67617/bluetoothctl-fails-to-conn
 https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-15-10-16-04-16-10/689297#689297  
 https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU  
 https://bbs.archlinux.org/viewtopic.php?id=172261  
-https://github.com/davidedg/NAS-mod-config/blob/master/bt-sound/bt-sound-Bluez5_PulseAudio5.txt
+https://github.com/davidedg/NAS-mod-config/blob/master/bt-sound/bt-sound-Bluez5_PulseAudio5.txt  
+https://github.com/ev3dev/ev3dev/issues/198
 
