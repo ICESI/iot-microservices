@@ -186,6 +186,10 @@ snowboy@raspberrypi:~/songs $ aplay bohemian.mp3
 Playing raw data 'bohemian.mp3' : Unsigned 8 bit, Rate 8000 Hz, Mono
 ```
 
+```
+jackd -d dummy
+```
+
 ### References
 https://github.com/Kitt-AI/snowboy  
 http://docs.kitt.ai/snowboy/  
