@@ -187,6 +187,10 @@ Playing raw data 'bohemian.mp3' : Unsigned 8 bit, Rate 8000 Hz, Mono
 ```
 
 ```
+sudo usermod -a -G audio snowboy
+```
+
+```
 jackd -d dummy
 ```
 
