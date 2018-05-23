@@ -194,6 +194,17 @@ sudo usermod -a -G audio snowboy
 jackd -d dummy
 ```
 
+```
+vi /usr/share/alsa/alsa.conf
+
+pcm.rear cards.pcm.rear
+pcm.center_lfe cards.pcm.center_lfe
+pcm.side cards.pcm.side
+pcm.hdmi cards.pcm.hdmi
+pcm.modem cards.pcm.modem
+pcm.phoneline cards.pcm.phoneline
+```
+
 ### References
 https://github.com/Kitt-AI/snowboy  
 http://docs.kitt.ai/snowboy/  
@@ -204,5 +215,6 @@ https://askubuntu.com/questions/689281/pulseaudio-can-not-load-bluetooth-module-
 https://donjajo.com/bluetooth-fix-a2dp-source-profile-connect-failed-xx-protocol-not-available-linux/#.WwEPq2G1vIU  
 https://bbs.archlinux.org/viewtopic.php?id=172261  
 https://github.com/davidedg/NAS-mod-config/blob/master/bt-sound/bt-sound-Bluez5_PulseAudio5.txt  
-https://github.com/ev3dev/ev3dev/issues/198
+https://github.com/ev3dev/ev3dev/issues/198  
+https://github.com/Kitt-AI/snowboy/issues/9
 
